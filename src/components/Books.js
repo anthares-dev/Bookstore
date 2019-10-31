@@ -1,6 +1,11 @@
 import React from "react";
+// import ReactFancyBox from "react-fancybox";
+// import "react-fancybox/lib/fancybox.css";
 
 class Books extends React.Component {
+  fancybox = () => {
+    console.log("ciao");
+  };
   render() {
     var { books, search, selectedOption } = this.props;
 
@@ -28,11 +33,10 @@ class Books extends React.Component {
                 <a
                   className="btn btn-primary"
                   role="button"
-                  href={book.detail}
                   data-fancybox="gallery"
                   data-caption={`Caption #${i}`}
+                  href={book.detail}
                 >
-                  {" "}
                   More Info
                 </a>
               </div>

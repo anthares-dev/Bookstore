@@ -19,6 +19,8 @@ class Header extends React.Component {
                 <input
                   type="radio"
                   value="all"
+                  name="options"
+                  autoComplete="off"
                   checked={selectedOption === "all"}
                   onChange={this.props.handleOptionChange}
                 />
@@ -34,6 +36,8 @@ class Header extends React.Component {
                 <input
                   type="radio"
                   value="en"
+                  name="options"
+                  autoComplete="off"
                   checked={selectedOption === "en"}
                   onChange={this.props.handleOptionChange}
                 />
@@ -49,6 +53,8 @@ class Header extends React.Component {
                 <input
                   type="radio"
                   value="es"
+                  name="options"
+                  autoComplete="off"
                   checked={selectedOption === "es"}
                   onChange={this.props.handleOptionChange}
                 />
@@ -64,6 +70,8 @@ class Header extends React.Component {
                 <input
                   type="radio"
                   value="ca"
+                  name="options"
+                  autoComplete="off"
                   checked={selectedOption === "ca"}
                   onChange={this.props.handleOptionChange}
                 />
@@ -77,7 +85,7 @@ class Header extends React.Component {
             <nav className="navbar navbar-expand-lg navbar-light">
               <a className="navbar-brand mr-auto" href="index.html">
                 <img
-                  src="./ubiqum-bookstore-LOGO.JPG"
+                  src={require("../../src/logoBookstore.JPG")}
                   className="img-fluid"
                   alt="Ubiqum Bookstore"
                 />
