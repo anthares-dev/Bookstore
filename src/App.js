@@ -1,6 +1,4 @@
 import React from "react";
-//import logo from "./logo.svg";
-//import "./App.css";
 import Header from "./components/Header";
 import Books from "./components/Books";
 
@@ -33,8 +31,6 @@ class App extends React.Component {
   }
 
   handleOptionChange = event => {
-    console.log("changing");
-
     this.setState({
       selectedOption: event.target.value
     });
@@ -51,7 +47,6 @@ class App extends React.Component {
       <div className="container">
         <Header
           selectedOption={this.state.selectedOption}
-          search={this.state.search}
           handleOptionChange={this.handleOptionChange}
           filterList={this.filterList}
         />{" "}
