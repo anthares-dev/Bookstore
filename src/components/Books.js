@@ -1,7 +1,7 @@
 import React from "react";
 
 const Books = ({ books, search, selectedOption }) => {
-  var books = books
+  var filteredBooks = books
     .filter(book => {
       return book.title.toLowerCase().search(search) !== -1;
     })
@@ -11,7 +11,7 @@ const Books = ({ books, search, selectedOption }) => {
 
   return (
     <div className="row justify-content-between">
-      {books.map((book, i) => (
+      {filteredBooks.map((book, i) => (
         <div className="flip-card border mb-3" key={i}>
           <div className="flip-card-inner">
             <div className="flip-card-front">
